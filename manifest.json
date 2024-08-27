@@ -1,0 +1,28 @@
+{
+  "name": "Adlink IPC BOM autoCheck",
+  "description": "Adlink IPC BOM autoCheck Backendversion2.46",
+  "version": "2.47",
+  "manifest_version": 3,
+  "background":{
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "activeTab", "scripting","debugger","windows"],
+  "action":{
+    "default_popup":"popup.html",
+    "default_icon":{
+      "16": "/images/ADLINK16.png",
+      "32": "/images/ADLINK32.png",
+      "48": "/images/ADLINK48.png",
+      "128": "/images/ADLINK128.png"
+    }
+  },
+  "icons":{
+    "16": "/images/ADLINK16.png",
+    "32": "/images/ADLINK32.png",
+    "48": "/images/ADLINK48.png",
+    "128": "/images/ADLINK128.png"
+  },
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}

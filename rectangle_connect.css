@@ -1,0 +1,8 @@
+.rectangle {
+    position:absolute;
+    width: 70px;
+    height: 20px;
+    background: #79FF79;
+    top: 8%;
+    left: 65%;
+}

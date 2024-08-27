@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="button2.css">
+    <link rel="stylesheet" href="table.css">
+    <link rel="stylesheet" href="checkbox.css">
+    <link rel="stylesheet" href="rectangle_connect.css">
+    <style type="text/css">
+      body::-webkit-scrollbar {
+        display: none;
+      }
+      body {
+        width: 400px;
+        height: 200px;
+        overflow: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" size=30 id="ERP_textbox" placeholder="不判斷輸入N/A" onfocus="this.placeholder=''" onblur="this.placeholder='不判斷輸入N/A'"></input>>
+    <button type="submit" id="submitBtn" value="run" ></button>
+
+    <br>
+    <button2 type="button" class="cls" value="clear localStorage">Clear LocalStorage</button2>
+    <button2 type="button" class="innt" value="Innt HTML">Innt HTML</button2>
+    <div id="rectangle" class="rectangle" style="visibility:hidden" >&nbsplink normal</div>
+    <button id ='rectangle_bu' style="padding: 1px 4px;font-size: 1px;margin: 1px;border-color: blue;">need connect</button>
+    <label class="toggler-wrapper show" style="visibility:hidden">
+          <input type="checkbox" id="myCheck" onclick="myFunction()">
+          <div class="toggler-slider">
+            <div class="toggler-knob" ></div>
+          </div>
+    </label>
+    </br>
+    <br>
+    <table id="searchResult" RULES="ROWS">
+      <thead>
+      <th><font size ="2">Status</font></th>
+      <th><font size ="2">Check Item</font></th>
+      <th><font size ="2">Recommend_Item</font><th>
+      </thead>
+      <tbody id="result_table">
+        <tr id="ERP_check" style="border:3px #CA8EC2 solid;border-style:dashed;" rules="none" cellpadding="10" border='1'>
+          <td rowspan ="2" ><font size="3">ERP_check</font></td>
+          <td colspan="2">Source ERP</td>
+        </tr>
+        <tr id="ERP_check2">
+          <td colspan="2">ERP</td>
+        </tr>
+        <tr id="ERP_partname_check" style="border:3px #CA8EC2 solid;border-style:dashed;" rules="none" cellpadding="10" border='1'>
+          <td rowspan ="2" ><font size="3">ERP_P_check</font></td>
+          <td colspan="2">Source ERP</td>
+        </tr>
+        <tr id="ERP_partname_check2">
+          <td colspan="2">ERP</td>
+        </tr>
+        <tr id="IPC_check" style="border:3px #CA8EC2 solid;border-style:dashed;" rules="none" cellpadding="10" border='1'>
+          <td><font size="3">IPC_check</font></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr id="SAP_release">
+          <td>?</td>
+          <td>SAP Release</td>
+          <td></td>
+        </tr>
+        <tr id = "Motherboard">
+          <td>?</td>
+          <td>Motherboard</td>
+          <td></td>
+        </tr>
+        <tr id="Chassis">
+          <td>?</td>
+          <td>Chassis</td>
+          <td></td>
+        </tr>
+        <tr id = "Storage">
+          <td>?</td>
+          <td>Storage</td>
+          <td></td>
+        </tr>
+        <tr id = "CPU">
+          <td>?</td>
+          <td>CPU</td>
+          <td></td>
+        </tr>
+        <tr id = "Memory">
+          <td>?</td>
+          <td>Memory</td>
+          <td></td>
+        </tr>
+        <tr id="OS">
+          <td>?</td>
+          <td>OS</td>
+          <td></td>
+        </tr>
+        <tr id="BackPlane">
+          <td>?</td>
+          <td>BackPlane</td>
+          <td></td>
+        </tr>
+        <tr id="PSU">
+          <td>?</td>
+          <td>PSU</td>
+          <td></td>
+        </tr>
+        <tr id="SATACable">
+          <td>?</td>
+          <td>SATA Cable</td>
+          <td></td>
+        </tr>
+        <tr id="RAID_Box">
+          <td>?</td>
+          <td>RAID_Box</td>
+          <td></td>
+        </tr>
+        <tr id="RoHS_Declarat">
+          <td>?</td>
+          <td>RoHS_Declarat</td>
+          <td></td>
+        </tr>
+        <tr id="USB_COM_Cable">
+          <td>?</td>
+          <td>USB_COM_Cable</td>
+          <td></td>
+        </tr>
+        <tr id="Graphic_card">
+          <td>?</td>
+          <td>Graphic_card</td>
+          <td></td>
+        </tr>
+        <tr id="Latch">
+          <td>?</td>
+          <td>Latch</td>
+          <td></td>
+        </tr>
+        <tr id="OtherWarning">
+          <td>?</td>
+          <td>Other Warning</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Error Msg:</td>
+          <td id="err_msg" colspan="2"></td>
+        </tr>
+      </tbody>
+    </table>
+    <script id ="server_ip_txt"src=Server_Address.txt></script>
+    <input id="Server_Address_textbox" type="text" height=30 size=40 value=''>Server_Address</input>
+    <br></br>
+    version = <span id='version'></span><span id='version_info'></span><br>
+    <a id ="download_update" href="" style="visibility:hidden">DOWNLOAD_UPDATE</a>
+    <script src="popup.js"></script>
+  </body>
+</html>
